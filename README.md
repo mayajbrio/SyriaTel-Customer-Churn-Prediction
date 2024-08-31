@@ -94,7 +94,7 @@ To improve on this project, the following are some steps that can be worked on:
 - Consider using ensemble methods like Random Forests or Gradient Boosting to combine the strengths of multiple models and improve predictive performance.
 
 ## For More Information
-See the full project in the [Jupyter Notebook](./customer_churn_prediction.ipynb) or review this [Presentation](./Customer_Churn_Prediction_Presentation.pdf)
+See the full project in the [Jupyter Notebook](./notebook.ipynb) or review this [Presentation](./presentation.pdf.pdf)
 
 ## Repository Structure
 ```
