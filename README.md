@@ -19,7 +19,7 @@ The [Churn in Telcom's dataset](https://www.kaggle.com/datasets/becksddf/churn-i
 
 The dataset was cleaned initally in preparation for analysis. Afterwards Exploratory Data Analysis(EDA) was performed to gain insights into the distribution of the data as well as the interaction of features with the target value. The data was then cleaned again during data preparation, then scaled and split into the train and test set in preparation for modelling. During analysis we gained the following insight into the target variable:
 
-[Churn Distribution](./images/churn_distribution.png)
+![Churn Distribution](./images/churn_distribution.png)
 
 The target variable shows that 85.5% of customers did not abandon SyriaTel's services whearas 14.5% who did. The target variable also showed evidence of a class imbalance. Based on the analysis done, features that contributed significantly to the churn target were retained.
 
@@ -30,23 +30,23 @@ Four classification models were developed to aid in our predictions. We employed
 #### Baseline Model
 The baseline model was built using default parameters. The model attained an overal accuracy of 77%. The model also attained a training accuracy of 76% and a test accuracy of 77%. Below is the confusion matrix:
 
-[Logistic Regression Confusion Matrix](./images/log_reg_matrix.png)
+![Logistic Regression Confusion Matrix](./images/log_reg_matrix.png)
 
 #### Logistic Regression with Hyperparameter Tuning
 The baseline model was improved further using GridSearch CV to get the optimal hyperparameters. The model's overall accuracy is 76% with a training accuracy of 77%, and a test accuracy of 76%. Below is the confusion matrix:
 
-[Tuned Logistic Regression Confusion Matrix](./images/tuned_log_reg_matrix.png)
+![Tuned Logistic Regression Confusion Matrix](./images/tuned_log_reg_matrix.png)
 
 ### Model 2: Decision Tree Model
 #### Baseline Model
 The model attained an overall accuracy of 90% with a training accuracy of 100% and a test accuracy of 90%. This model obviously exhibits problems with overfitting. Below is the confusion matrix:
 
-[Decision Tree Confusion Matrix](./images/desc_tree_matrix.png)
+![Decision Tree Confusion Matrix](./images/desc_tree_matrix.png)
 
 #### Decision Tree Model with Hyperparameter Tuning
 The baseline model was improved further using GridSearch CV to get the optimal hyperparameters. This model attained an overall accuracy of 89% with a training accuracy of 95% and a test accuracy of 89%. Below is the confusion matrix:
 
-[Tuned Decision Tree Confusion Matrix](./images/tuned_desi_tree_matrix.png)
+![Tuned Decision Tree Confusion Matrix](./images/tuned_desi_tree_matrix.png)
 
 ## Evaluation
 Each model was evaluated by looking at the classification reports, ROC-AUC and lastly validated using k-fold cross-validation to ensure the model generalizes well to unseen data.
@@ -81,8 +81,11 @@ For the tuned models:
 
 Based on the above, here are some recommendations to SyriaTel:
 1. SyriaTel should adopt the **Tuned Decision Tree** model as it is preferable due to its improved ROC AUC score, better generalization, and consistent performance across folds. While it exhibits slight issues with precision for class 1, it overall provides a more balanced and accurate prediction compared to the Logistic Regression model.
+
 2.  SyriaTel needs to focus on the number **customer calls**, **total day charge**, whether or not a customer is subscribed to an **international plan**, **total international calls** and finally **total evening charge** when predicting customer churn.
+
 3. Implement loyalty programs or offer special incentives for long-tenured customers to reward their loyalty as longer tenured customers are less likely to churn.
+
 4. Offer flexible pricing options for day packages and evening packages since customers who are charged more tend to churn.
 
 ## Next Steps
